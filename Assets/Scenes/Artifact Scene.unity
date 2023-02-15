@@ -433,5 +433,5 @@ MonoBehaviour:
   yRotation: 1
   invertX: 0
   invertY: 1
-  touchAnywhere: 0
+  touchAnywhere: 1
   m_camera: {fileID: 1136735985}
