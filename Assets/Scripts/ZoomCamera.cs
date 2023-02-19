@@ -6,6 +6,8 @@ using UnityEngine;
 public class ZoomCamera : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] float minZoom = 50f;
+    [SerializeField] float maxZoom = 100f;
     private float targetFieldOfView;
     private Camera m_camera;
 
@@ -27,7 +29,7 @@ public class ZoomCamera : MonoBehaviour
         }
         
 
-        targetFieldOfView = Mathf.Clamp(targetFieldOfView, 50f, 100f);
+        targetFieldOfView = Mathf.Clamp(targetFieldOfView, minZoom, maxZoom);
         m_camera.fieldOfView = Mathf.Lerp(m_camera.fieldOfView, targetFieldOfView, Time.deltaTime * speed);
     }
 }
