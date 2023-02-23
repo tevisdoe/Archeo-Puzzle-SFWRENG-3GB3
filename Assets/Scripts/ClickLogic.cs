@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,13 +26,28 @@ public class ClickLogic : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             RaycastHit rayHit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit, 100f, clickLayer))
+            Vector2 mouseHit = Input.mousePosition;
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(mouseHit), out rayHit, 100f, clickLayer))
             {
-                ArtifactPiece hitPiece = rayHit.collider.GetComponent<ArtifactPiece>(); 
-                if (currentTool == Tool.None) hitPiece.noneClick();
-                else if (currentTool == Tool.Magnifier) hitPiece.magnifierClick();
-                else if (currentTool == Tool.Brush) hitPiece.brushClick();
-                else hitPiece.materialClick();
+                ArtifactPiece hitPiece = rayHit.collider.GetComponent<ArtifactPiece>();
+
+                switch (currentTool) {
+                    case Tool.None:
+                        hitPiece.noneClick(mouseHit);
+                        break;
+                    case Tool.Magnifier:
+                        hitPiece.magnifierClick(mouseHit);
+                        break;
+                    case Tool.Brush:
+                        hitPiece.brushClick(mouseHit);
+                        break;
+                    case Tool.Material:
+                        hitPiece.materialClick(mouseHit);
+                        break;
+                    default:
+                        break;
+                }
+                     
             }
         }
     }

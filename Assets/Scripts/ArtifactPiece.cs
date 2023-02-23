@@ -2,29 +2,38 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ArtifactPiece : MonoBehaviour
 {
     [SerializeField]
-    private String message;
+    private String noneMessage, magniferMessage, brushMessage, materialMessage;
+    [SerializeField]
+    Canvas UICanvas;
+    private ToolTipManager manager;
 
-    public void noneClick()
+    void Start()
     {
-        Debug.Log(message);
+        manager = UICanvas.GetComponent<ToolTipManager>();
     }
 
-    public void magnifierClick()
+    public void noneClick(Vector2 mousePos)
     {
-        Debug.Log("You used the magnifying glass.");
+        manager.ShowTip(noneMessage, mousePos);
     }
 
-    public void brushClick()
+    public void magnifierClick(Vector2 mousePos)
     {
-        Debug.Log("You used the brush.");
+        manager.ShowTip(magniferMessage, mousePos);
     }
 
-    public void materialClick()
+    public void brushClick(Vector2 mousePos)
     {
-        Debug.Log("You used the material analyzer.");
+        manager.ShowTip(brushMessage, mousePos);
+    }
+
+    public void materialClick(Vector2 mousePos)
+    {
+        manager.ShowTip(materialMessage, mousePos);
     }
 }
