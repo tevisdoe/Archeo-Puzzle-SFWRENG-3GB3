@@ -6,6 +6,10 @@ public class ClickLogic : MonoBehaviour
 {
     [SerializeField]
     private LayerMask clickLayer;
+    [SerializeField]
+    private Texture2D magnifierTexture, brushTexture, materialTexture;
+    private Vector2 clickPosition = new Vector2(-1,1);
+    private CursorMode cursorMode = CursorMode.Auto;
 
     private enum Tool
     {
@@ -14,12 +18,7 @@ public class ClickLogic : MonoBehaviour
         Material,
         None
     }
-    private Tool currentTool;
-
-    private void Start()
-    {
-        currentTool = Tool.None;
-    }
+    private Tool currentTool = Tool.None;
 
     private void Update()
     {
@@ -39,18 +38,42 @@ public class ClickLogic : MonoBehaviour
 
     public void toggleMagnifier()
     {
-        if (currentTool != Tool.Magnifier) currentTool = Tool.Magnifier;
-        else currentTool = Tool.None;
+        if (currentTool != Tool.Magnifier)
+        {
+            currentTool = Tool.Magnifier;
+            Cursor.SetCursor(magnifierTexture, clickPosition, cursorMode);
+        }
+        else
+        {
+            currentTool = Tool.None;
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        }
     }
 
     public void toggleBrush()
     {
-        if (currentTool != Tool.Brush) currentTool = Tool.Brush;
-        else currentTool = Tool.None;
+        if (currentTool != Tool.Brush)
+        {
+            currentTool = Tool.Brush;
+            Cursor.SetCursor(brushTexture, clickPosition, cursorMode);
+        }
+        else
+        {
+            currentTool = Tool.None;
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        }
     }
     public void toggleMaterial()
     {
-        if (currentTool != Tool.Material) currentTool = Tool.Material;
-        else currentTool = Tool.None;
+        if (currentTool != Tool.Material)
+        {
+            currentTool = Tool.Material;
+            Cursor.SetCursor(materialTexture, clickPosition, cursorMode);
+        }
+        else
+        {
+            currentTool = Tool.None;
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        }
     }
 }
