@@ -6,25 +6,33 @@ using UnityEngine;
         [SerializeField] private float rotationRate = 1.0f;
         private float m_previousX;
         private float m_previousY;
-        [SerializeField] private Camera m_camera;
+        private ToolLogic toolLogic;
+        public Transform targetTransform;
 
-        private void Update ()
+    private void Start()
+    {
+        toolLogic = this.gameObject.GetComponent<ToolLogic>();
+    }
+
+    private void Update ()
         {
-
-            if (Input.GetMouseButtonDown(1))
+            bool menuAccessed = toolLogic.getMenuAccessed();
+            if (!menuAccessed)
             {
-                m_previousX = Input.mousePosition.x;
-                m_previousY = Input.mousePosition.y;
-            }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    m_previousX = Input.mousePosition.x;
+                    m_previousY = Input.mousePosition.y;
+                }
+                else if (Input.GetMouseButton(1))
+                {
+                    var deltaX = (Input.mousePosition.y - m_previousY) * rotationRate;
+                    var deltaY = -(Input.mousePosition.x - m_previousX) * rotationRate;
+                    targetTransform.Rotate(deltaX, deltaY, 0, Space.World);
 
-            if(Input.GetMouseButton(1)) 
-            {
-                var deltaX = (Input.mousePosition.y - m_previousY) * rotationRate;
-                var deltaY = -(Input.mousePosition.x - m_previousX) * rotationRate;
-                transform.Rotate (deltaX, deltaY, 0, Space.World);
-
-                m_previousX = Input.mousePosition.x;
-                m_previousY = Input.mousePosition.y;
+                    m_previousX = Input.mousePosition.x;
+                    m_previousY = Input.mousePosition.y;
+                }
             }
         }
     }
