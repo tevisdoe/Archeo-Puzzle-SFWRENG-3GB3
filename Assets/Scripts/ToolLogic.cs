@@ -30,24 +30,41 @@ public class ToolLogic : MonoBehaviour
             Vector2 mouseHit = Input.mousePosition;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(mouseHit), out rayHit, 100f, clickLayer))
             {
-                ArtifactPiece hitPiece = rayHit.collider.GetComponent<ArtifactPiece>();
-
-                switch (currentTool) {
-                    case Tool.None:
-                        hitPiece.noneClick(mouseHit);
-                        break;
-                    case Tool.Magnifier:
-                        hitPiece.magnifierClick(mouseHit);
-                        break;
-                    case Tool.Brush:
-                        hitPiece.brushClick(mouseHit);
-                        break;
-                    case Tool.Material:
-                        hitPiece.materialClick(mouseHit);
-                        break;
-                    default:
-                        break;
+                if (rayHit.collider.TryGetComponent<ArtifactPiece>(out ArtifactPiece hitPiece))
+                {
+                    switch (currentTool)
+                    {
+                        case Tool.None:
+                            hitPiece.noneClick(mouseHit);
+                            break;
+                        case Tool.Magnifier:
+                            if (!hitPiece.checkForDust()) hitPiece.magnifierClick(mouseHit);
+                            else hitPiece.coveredClick(mouseHit);
+                            break;
+                        case Tool.Brush:
+                            hitPiece.brushClick(mouseHit);
+                            break;
+                        case Tool.Material:
+                            hitPiece.materialClick(mouseHit);
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                } else if (rayHit.collider.TryGetComponent(out Cobweb cobweb))
+                {
+                    switch (currentTool)
+                    {
+                        case Tool.Brush:
+                            cobweb.Brush(mouseHit);
+                            break;
+                        default:
+                            cobweb.noBrush(mouseHit);
+                            break;
+                    }
                 }
+
+                
                      
             }
         }

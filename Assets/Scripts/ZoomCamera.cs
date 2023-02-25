@@ -15,8 +15,8 @@ public class ZoomCamera : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        m_camera = this.gameObject.GetComponent<Camera>();
-        toolLogic= this.gameObject.GetComponent<ToolLogic>();
+        m_camera = gameObject.GetComponent<Camera>();
+        toolLogic= gameObject.GetComponent<ToolLogic>();
     }
     // Update is called once per frame
     void Update()
