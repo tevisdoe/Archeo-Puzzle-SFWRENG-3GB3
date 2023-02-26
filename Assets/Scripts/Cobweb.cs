@@ -10,11 +10,14 @@ public class Cobweb : MonoBehaviour
     private Renderer rend;
     private float fadeSpeed = 5f;
     private bool fadeOut = false;
+    private AudioSource brushSource;
+    public AudioClip brushClip;
 
     void Start()
     {
         parentObject = transform.parent.gameObject.GetComponent<ArtifactPiece>();
         rend = GetComponent<Renderer>();
+        brushSource = transform.parent.transform.parent.gameObject.GetComponent<AudioSource>();
     }
 
     public IEnumerator FadeOutObject()
@@ -28,8 +31,8 @@ public class Cobweb : MonoBehaviour
 
             if (cobwebColour.a <= 0)
             {
-                parentObject.brushMessage = clearedMessage;
-                Destroy(gameObject); 
+                gameObject.SetActive(false);
+                if (!parentObject.checkForDust()) parentObject.brushMessage = clearedMessage;
                 break;
             }
             yield return new WaitForSeconds(0.01f);
@@ -47,6 +50,7 @@ public class Cobweb : MonoBehaviour
         if (!fadeOut)
         {
             fadeOut = true;
+            brushSource.PlayOneShot(brushClip);
             parentObject.tipManager.ShowTip("You brush away the cobweb.", mousePos);
             StartCoroutine(FadeOutObject());
         }

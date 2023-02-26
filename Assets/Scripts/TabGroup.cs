@@ -8,7 +8,10 @@ public class TabGroup : MonoBehaviour
     public List<TabButton> tabButtons;
     public Image databankBackground;
     public ScrollRect scrollArea;
+    public AudioSource artifactSource;
+    public AudioClip tabClip;
     public List<GameObject> info;
+    private int currentIndex;
 
     public void Subscribe(TabButton button)
     {
@@ -24,6 +27,8 @@ public class TabGroup : MonoBehaviour
         databankBackground.color = button.selectedColour;
 
         int index = button.transform.GetSiblingIndex();
+        if (index != currentIndex) artifactSource.PlayOneShot(tabClip);
+        currentIndex = index;
 
         for (int i = 0; i < info.Count; i++)
         {
@@ -31,6 +36,8 @@ public class TabGroup : MonoBehaviour
             {
                 info[i].SetActive(true);
                 scrollArea.content = info[i].GetComponent<RectTransform>();
+                scrollArea.verticalNormalizedPosition = 1f;
+                
             }
             else info[i].SetActive(false);
         }

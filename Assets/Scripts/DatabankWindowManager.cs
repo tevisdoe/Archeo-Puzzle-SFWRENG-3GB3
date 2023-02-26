@@ -6,21 +6,23 @@ using UnityEngine.UI;
 public class DatabankWindowManager : MonoBehaviour
 {
     public Button databankButton;
-    private Image background;
+    public AudioClip open, close;
+    public AudioSource artifactSource;
 
     public void Start()
     {
-        background = this.gameObject.GetComponent<Image>();
-        hideDatabank();
+        this.gameObject.SetActive(false);
     }
     public void showDatabank()
     {
         this.gameObject.SetActive(true);
+        artifactSource.PlayOneShot(open);
         databankButton.gameObject.SetActive(false);
     }
     public void hideDatabank()
     {
         this.gameObject.SetActive(false);
+        artifactSource.PlayOneShot(close);
         databankButton.gameObject.SetActive(true);
     }
 }

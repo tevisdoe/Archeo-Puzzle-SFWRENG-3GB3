@@ -9,7 +9,9 @@ public class ToolLogic : MonoBehaviour
     private LayerMask clickLayer;
     [SerializeField]
     private Texture2D magnifierTexture, brushTexture, materialTexture;
-    private Vector2 clickPosition = new Vector2(-1,1);
+    public AudioSource artifact;
+    public AudioClip toolSwapClip;
+    private Vector2 clickPosition = new Vector2(0, 1);
     private CursorMode cursorMode = CursorMode.Auto;
     private bool menuAccessed = false;
 
@@ -82,6 +84,8 @@ public class ToolLogic : MonoBehaviour
             currentTool = Tool.None;
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
+
+        playToolSwapSound();
     }
 
     public void toggleBrush()
@@ -96,6 +100,7 @@ public class ToolLogic : MonoBehaviour
             currentTool = Tool.None;
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
+        playToolSwapSound();
     }
     public void toggleMaterial()
     {
@@ -109,6 +114,7 @@ public class ToolLogic : MonoBehaviour
             currentTool = Tool.None;
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
+        playToolSwapSound();
     }
 
     public void toggleMenuCursor()
@@ -137,6 +143,11 @@ public class ToolLogic : MonoBehaviour
                 break;
         }
         
+    }
+
+    private void playToolSwapSound()
+    {
+        artifact.PlayOneShot(toolSwapClip, 0.5f);
     }
 
     public bool getMenuAccessed()
