@@ -74,47 +74,56 @@ public class ToolLogic : MonoBehaviour
 
     public void toggleMagnifier()
     {
-        if (currentTool != Tool.Magnifier)
-        {
-            currentTool = Tool.Magnifier;
-            Cursor.SetCursor(magnifierTexture, clickPosition, cursorMode);
-        }
-        else
-        {
-            currentTool = Tool.None;
-            Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        }
+        
+        if (!menuAccessed) {
+            if (currentTool != Tool.Magnifier)
+            {
+                currentTool = Tool.Magnifier;
+                Cursor.SetCursor(magnifierTexture, clickPosition, cursorMode);
+            }
+            else
+            {
+                currentTool = Tool.None;
+                Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            }
 
-        playToolSwapSound();
+            playToolSwapSound();
+        }
     }
 
     public void toggleBrush()
     {
-        if (currentTool != Tool.Brush)
+        if (!menuAccessed)
         {
-            currentTool = Tool.Brush;
-            Cursor.SetCursor(brushTexture, clickPosition, cursorMode);
+            if (currentTool != Tool.Brush)
+            {
+                currentTool = Tool.Brush;
+                Cursor.SetCursor(brushTexture, clickPosition, cursorMode);
+            }
+            else
+            {
+                currentTool = Tool.None;
+                Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            }
+            playToolSwapSound();
         }
-        else
-        {
-            currentTool = Tool.None;
-            Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        }
-        playToolSwapSound();
     }
     public void toggleMaterial()
     {
-        if (currentTool != Tool.Material)
+        if (!menuAccessed)
         {
-            currentTool = Tool.Material;
-            Cursor.SetCursor(materialTexture, clickPosition, cursorMode);
+            if (currentTool != Tool.Material)
+            {
+                currentTool = Tool.Material;
+                Cursor.SetCursor(materialTexture, clickPosition, cursorMode);
+            }
+            else
+            {
+                currentTool = Tool.None;
+                Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            }
+            playToolSwapSound();
         }
-        else
-        {
-            currentTool = Tool.None;
-            Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        }
-        playToolSwapSound();
     }
 
     public void toggleMenuCursor()

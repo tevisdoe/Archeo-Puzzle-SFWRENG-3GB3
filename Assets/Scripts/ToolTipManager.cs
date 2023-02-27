@@ -21,11 +21,11 @@ public class ToolTipManager : MonoBehaviour
     public void ShowTip(string info, Vector2 mousePos)
     {
         StopAllCoroutines();
+        tipWindow.gameObject.SetActive(true);
         windowText.text = info;
         tipWindow.sizeDelta = new Vector2(windowText.preferredWidth > 500 ? 500 : windowText.preferredWidth + 10, windowText.preferredHeight + 10);
-
-        tipWindow.gameObject.SetActive(true);
-        tipWindow.transform.localPosition = new Vector2(mousePos.x, mousePos.y -200);
+        
+        //tipWindow.transform.localPosition = new Vector2(mousePos.x - 700, mousePos.y - 500);
         StartCoroutine(StartTimer());
     }
 
