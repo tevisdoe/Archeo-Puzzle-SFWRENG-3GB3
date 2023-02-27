@@ -1544,16 +1544,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'How to play instructions here. Filler text:"Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-    id est laborum."
+  m_text: 'Basic Controls:
 
 
-'
+    To rotate the artefact you are inspecting, hold
+    right click.
+
+
+    To use tools on the artefact, click on the tool on screen
+    that you want to use and then click on the portion of the artefact you want to
+    target. To put the tool back, click it again.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
