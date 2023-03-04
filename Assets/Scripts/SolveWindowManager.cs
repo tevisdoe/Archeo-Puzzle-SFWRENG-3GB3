@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SolveWindowManager : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class SolveWindowManager : MonoBehaviour
     [SerializeField]
     string correctRegion;
 
+    private bool success;
+    private float time = 2.5f;
+
     public void Start()
     {
         this.gameObject.SetActive(false);
@@ -35,6 +39,17 @@ public class SolveWindowManager : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         solveButton.gameObject.SetActive(true);
+    }
+
+    void Update()
+    {
+        if (!success)
+            return;
+        time -= Time.deltaTime;
+        if (time <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     private bool validateInput()
@@ -103,8 +118,9 @@ public class SolveWindowManager : MonoBehaviour
             return;
         }
 
-        this.resultText.text = "Success!";
+        this.resultText.text = "Success!\nReturning to Main Menu...";
         this.resultText.color = Color.green;
 
+        this.success = true;
     }
 }
