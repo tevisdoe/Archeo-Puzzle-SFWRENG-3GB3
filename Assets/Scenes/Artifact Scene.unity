@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18372205, g: 0.22815211, b: 0.29904005, a: 1}
+  m_IndirectSpecularColor: {r: 0.18372226, g: 0.22815262, b: 0.29904073, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -355,8 +355,8 @@ RectTransform:
   - {fileID: 1593772762}
   - {fileID: 1979443239}
   - {fileID: 1192251030}
-  - {fileID: 711091215}
   - {fileID: 542683255}
+  - {fileID: 711091215}
   m_Father: {fileID: 650946907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1698,7 +1698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9056301067548469951, guid: a22f89a3bb7ada2d89a4cd274601df24, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9056301067548469951, guid: a22f89a3bb7ada2d89a4cd274601df24, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2476,6 +2476,10 @@ PrefabInstance:
       propertyPath: correctRegion
       value: Ancient Greece
       objectReference: {fileID: 0}
+    - target: {fileID: 1430387317682071938, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: databankButton
+      value: 
+      objectReference: {fileID: 1979443240}
     - target: {fileID: 1430387317682071939, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2486,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1430387317682071939, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1430387317682071939, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3520,7 +3524,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 25
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3760,6 +3764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   databankButton: {fileID: 1979443240}
+  solveButton: {fileID: 542683256}
   open: {fileID: 8300000, guid: fdd4ba50d5da61543aae50ebb1ddf710, type: 3}
   close: {fileID: 8300000, guid: a4dca53621db81c45a7895ac4c072508, type: 3}
   artifactSource: {fileID: 227362241}
@@ -4889,7 +4894,8 @@ MonoBehaviour:
     of humans on display, but the ink is fading.
   brushMessage: No dust here.
   materialMessage: 97% Clay<br>3% Carbon
-  coveredMessage: It's hard to make out a complete picture with the dust in the way.
+  coveredMessage: It's hard to make out a complete picture with the cobwebs in the
+    way.
   magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
   materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
   tipManager: {fileID: 7341832}
