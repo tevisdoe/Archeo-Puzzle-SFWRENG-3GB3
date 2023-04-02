@@ -27,7 +27,7 @@ public class TabGroup : MonoBehaviour
         databankBackground.color = button.selectedColour;
 
         int index = button.transform.GetSiblingIndex();
-        if (index != currentIndex) artifactSource.PlayOneShot(tabClip);
+        if (index != currentIndex && artifactSource) artifactSource.PlayOneShot(tabClip);
         currentIndex = index;
 
         for (int i = 0; i < info.Count; i++)
