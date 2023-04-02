@@ -9,9 +9,7 @@ using UnityEngine.SceneManagement;
 public class SolveWindowManager : MonoBehaviour
 {
     [SerializeField]
-    Button solveButton;
-    [SerializeField]
-    Button databankButton;
+    List<Button> UIButtons;
     [SerializeField]
     TMPro.TMP_Dropdown regionDropdown;
     [SerializeField]
@@ -35,14 +33,18 @@ public class SolveWindowManager : MonoBehaviour
     public void showSolve()
     {
         this.gameObject.SetActive(true);
-        solveButton.gameObject.SetActive(false);
-        databankButton.gameObject.SetActive(false);
+        foreach (Button button in UIButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
     }
     public void hideSolve()
     {
         this.gameObject.SetActive(false);
-        solveButton.gameObject.SetActive(true);
-        databankButton.gameObject.SetActive(true);
+        foreach (Button button in UIButtons)
+        {
+            button.gameObject.SetActive(true);
+        }
     }
 
     void Update()

@@ -1,35 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class DatabankWindowManager : MonoBehaviour
+public class ExitManager : MonoBehaviour
 {
+
     public List<Button> UIButtons;
-    public AudioClip open, close;
-    public AudioSource artifactSource;
 
     public void Start()
     {
         this.gameObject.SetActive(false);
     }
-    public void showDatabank()
+    public void OpenConfirmationWindow()
     {
         this.gameObject.SetActive(true);
-        artifactSource.PlayOneShot(open);
         foreach (Button button in UIButtons)
         {
             button.gameObject.SetActive(false);
         }
     }
-    public void hideDatabank()
+
+    public void CloseConfirmationWindow()
     {
         this.gameObject.SetActive(false);
-        artifactSource.PlayOneShot(close);
         foreach (Button button in UIButtons)
         {
             button.gameObject.SetActive(true);
         }
     }
 
+    public void exitToMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    }
 }
