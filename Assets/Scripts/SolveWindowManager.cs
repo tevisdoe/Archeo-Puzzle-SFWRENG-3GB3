@@ -11,6 +11,8 @@ public class SolveWindowManager : MonoBehaviour
     [SerializeField]
     Button solveButton;
     [SerializeField]
+    Button databankButton;
+    [SerializeField]
     TMPro.TMP_Dropdown regionDropdown;
     [SerializeField]
     TMPro.TMP_InputField fromDateInput;
@@ -34,11 +36,13 @@ public class SolveWindowManager : MonoBehaviour
     {
         this.gameObject.SetActive(true);
         solveButton.gameObject.SetActive(false);
+        databankButton.gameObject.SetActive(false);
     }
     public void hideSolve()
     {
         this.gameObject.SetActive(false);
         solveButton.gameObject.SetActive(true);
+        databankButton.gameObject.SetActive(true);
     }
 
     void Update()

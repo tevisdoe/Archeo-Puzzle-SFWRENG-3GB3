@@ -11,7 +11,7 @@ public class ToolLogic : MonoBehaviour
     private Texture2D magnifierTexture, brushTexture, materialTexture;
     public AudioSource artifact;
     public AudioClip toolSwapClip;
-    private Vector2 clickPosition = new Vector2(0, 1);
+    private Vector2 clickPosition = new Vector2(0, 0);
     private CursorMode cursorMode = CursorMode.Auto;
     private bool menuAccessed = false;
 

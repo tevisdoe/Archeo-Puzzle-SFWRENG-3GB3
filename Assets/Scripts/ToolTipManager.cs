@@ -20,6 +20,7 @@ public class ToolTipManager : MonoBehaviour
 
     public void ShowTip(string info, Vector2 mousePos)
     {
+        if (info == "N/A") return;
         StopAllCoroutines();
         tipWindow.gameObject.SetActive(true);
         windowText.text = info;
