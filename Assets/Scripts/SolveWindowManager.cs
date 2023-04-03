@@ -33,6 +33,9 @@ public class SolveWindowManager : MonoBehaviour
     [SerializeField]
     string correctRegion;
 
+    [SerializeField]
+    GameObject solveDialog;
+
     public void Start()
     {
         this.gameObject.SetActive(false);
@@ -93,7 +96,7 @@ public class SolveWindowManager : MonoBehaviour
     private int dateValue(string val, int era)
     {
         var num = Int32.Parse(val);
-        return num * (era == -1 ? -1 : 1);
+        return num * (era == 0 ? -1 : 1);
     }
 
     private bool dateContains(int year, int from, int to)
@@ -130,16 +133,25 @@ public class SolveWindowManager : MonoBehaviour
         if (!this.dateContains(this.date, fromDateNum, toDateNum))
         {
             // show fail message for date
+            this.showDialog("Incorrect", "I am not sure the date is correct...");
             return;
         }
 
         if (!region.Equals(this.correctRegion))
         {
             // show fail message for region
+            this.showDialog("Incorrect", "I am not sure the region is correct...");
             return;
         }
 
         // Show success message
+        this.showDialog("Correct", "Score: " + this.points());
+    }
 
+    void showDialog(string message, string hint)
+    {
+        GameObject obj = Instantiate(solveDialog);
+        obj.GetComponent<SolveDialog>().result.text = message;
+        obj.GetComponent<SolveDialog>().scoreText.text = hint;
     }
 }

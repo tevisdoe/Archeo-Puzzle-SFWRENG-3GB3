@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18372226, g: 0.22815262, b: 0.29904073, a: 1}
+  m_IndirectSpecularColor: {r: 0.18372205, g: 0.22815211, b: 0.29904005, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -878,6 +878,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7341831}
     m_Modifications:
+    - target: {fileID: 411128544277335696, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_text
+      value: BC
+      objectReference: {fileID: 0}
     - target: {fileID: 1430387316256987230, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -982,6 +986,10 @@ PrefabInstance:
       propertyPath: solveButton
       value: 
       objectReference: {fileID: 542683256}
+    - target: {fileID: 1430387317682071938, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: solveDialog
+      value: 
+      objectReference: {fileID: 7213161153109854610, guid: ab03dfd48520faf43b2f4aed5dc28f18, type: 3}
     - target: {fileID: 1430387317682071938, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
       propertyPath: correctRegion
       value: Ancient Greece
@@ -1100,6 +1108,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1676233527614476658, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316883205477982269, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316883205477982269, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316883205477982269, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316883205477982269, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316883205477982269, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316883205477982269, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646218227063503345, guid: 36f9fa5d19cafd79794fc5687d12fd19, type: 3}
@@ -3251,6 +3283,10 @@ PrefabInstance:
     - target: {fileID: 5274510411654140353, guid: 6d94b64927577d142a686c3f25c4f977, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274510412070883888, guid: 6d94b64927577d142a686c3f25c4f977, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5274510412758933016, guid: 6d94b64927577d142a686c3f25c4f977, type: 3}
       propertyPath: artifactSource
