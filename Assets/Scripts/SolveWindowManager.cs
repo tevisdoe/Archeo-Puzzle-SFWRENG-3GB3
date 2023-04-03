@@ -18,7 +18,7 @@ public class SolveWindowManager : MonoBehaviour
     TMPro.TMP_Dropdown fromEraDropdown;
     [SerializeField]
     TMPro.TMP_InputField fromYearInput;
-    
+
     [SerializeField]
     TMPro.TMP_Dropdown toEraDropdown;
     [SerializeField]
@@ -32,9 +32,6 @@ public class SolveWindowManager : MonoBehaviour
 
     [SerializeField]
     string correctRegion;
-
-    private bool success;
-    private float time = 2.5f;
 
     public void Start()
     {
@@ -57,33 +54,37 @@ public class SolveWindowManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (!success)
-            return;
-        time -= Time.deltaTime;
-        if (time <= 0)
-        {
-            SceneManager.LoadScene("Menu");
-        }
-    }
-
     private bool validateInput()
     {
-        var dateRegex = new Regex(@"^\d+$");
+        try
+        {
+            int toYear = Int32.Parse(toYearInput.text);
+            if (toYear < 0)
+            {
+                feedbackText.text = "'To Year' must be positive";
+                return false;
+            }
+        }
+        catch (FormatException)
+        {
+            feedbackText.text = "'To Year' must be a number";
+            return false;
+        }
+        try
+        {
+            int fromYear = Int32.Parse(fromYearInput.text);
+            if (fromYear < 0)
+            {
+                feedbackText.text = "'From Year' must be positive";
+                return false;
+            }
+        }
+        catch (FormatException)
+        {
+            feedbackText.text = "'From Year' must be a number";
+            return false;
+        }
 
-        if (!dateRegex.IsMatch(fromYearInput.text))
-        {
-            this.feedbackText.text = "Only input the number in the 'From Date' field";
-            this.feedbackText.color = Color.red;
-            return false;
-        }
-        if (!dateRegex.IsMatch(toYearInput.text))
-        {
-            this.feedbackText.text = "Only input the number in the 'To Date' field";
-            this.feedbackText.color = Color.red;
-            return false;
-        }
 
         return true;
     }
@@ -98,6 +99,19 @@ public class SolveWindowManager : MonoBehaviour
     private bool dateContains(int year, int from, int to)
     {
         return from <= year && year <= to;
+    }
+
+    int points()
+    {
+        int points = 100;
+
+        int fromDateNum = this.dateValue(fromYearInput.text, fromEraDropdown.value);
+        int toDateNum = this.dateValue(toYearInput.text, toEraDropdown.value);
+
+        int diff = Math.Abs(toDateNum - fromDateNum) / 10;
+
+
+        return points - diff;
     }
 
     public void solve()
@@ -127,6 +141,5 @@ public class SolveWindowManager : MonoBehaviour
 
         // Show success message
 
-        this.success = true;
     }
 }
