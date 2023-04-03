@@ -70,18 +70,17 @@ public class SolveWindowManager : MonoBehaviour
 
     private bool validateInput()
     {
-        var dateRegex = new Regex(@"\d+(BC|AD)");
-
+        var dateRegex = new Regex(@"^\d+$");
 
         if (!dateRegex.IsMatch(fromYearInput.text))
         {
-            this.feedbackText.text = "The 'From Date' is in the wrong format";
+            this.feedbackText.text = "Only input the number in the 'From Date' field";
             this.feedbackText.color = Color.red;
             return false;
         }
         if (!dateRegex.IsMatch(toYearInput.text))
         {
-            this.feedbackText.text = "The 'To Date' is in the wrong format";
+            this.feedbackText.text = "Only input the number in the 'To Date' field";
             this.feedbackText.color = Color.red;
             return false;
         }
@@ -90,16 +89,10 @@ public class SolveWindowManager : MonoBehaviour
     }
 
     // Returns a negative year if it is BC, otherwise it should be positive
-    private int dateNum(string val)
+    private int dateValue(string val, int era)
     {
-        int len = val.Length;
-        string sub = val.Substring(0, len - 2);
-
-        var num = Int32.Parse(sub);
-        if (val.Substring(len - 2) == "BC")
-            num *= -1;
-
-        return num;
+        var num = Int32.Parse(val);
+        return num * (era == -1 ? -1 : 1);
     }
 
     private bool dateContains(int year, int from, int to)
@@ -116,8 +109,8 @@ public class SolveWindowManager : MonoBehaviour
             return;
         }
 
-        var toDateNum = this.dateNum(toYearInput.text);
-        var fromDateNum = this.dateNum(fromYearInput.text);
+        var toDateNum = this.dateValue(toYearInput.text, toEraDropdown.value);
+        var fromDateNum = this.dateValue(fromYearInput.text, fromEraDropdown.value);
         var region = regionDropdown.options[regionDropdown.value].text;
 
         if (!this.dateContains(this.date, fromDateNum, toDateNum))
