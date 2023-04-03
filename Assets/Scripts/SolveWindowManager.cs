@@ -10,16 +10,26 @@ public class SolveWindowManager : MonoBehaviour
 {
     [SerializeField]
     List<Button> UIButtons;
+
     [SerializeField]
     TMPro.TMP_Dropdown regionDropdown;
+
     [SerializeField]
-    TMPro.TMP_InputField fromDateInput;
+    TMPro.TMP_Dropdown fromEraDropdown;
     [SerializeField]
-    TMPro.TMP_InputField toDateInput;
+    TMPro.TMP_InputField fromYearInput;
+    
     [SerializeField]
-    TMPro.TMP_Text resultText;
+    TMPro.TMP_Dropdown toEraDropdown;
+    [SerializeField]
+    TMPro.TMP_InputField toYearInput;
+
+    [SerializeField]
+    TMPro.TMP_Text feedbackText;
+
     [SerializeField]
     int date;
+
     [SerializeField]
     string correctRegion;
 
@@ -63,16 +73,16 @@ public class SolveWindowManager : MonoBehaviour
         var dateRegex = new Regex(@"\d+(BC|AD)");
 
 
-        if (!dateRegex.IsMatch(fromDateInput.text))
+        if (!dateRegex.IsMatch(fromYearInput.text))
         {
-            this.resultText.text = "The 'From Date' is in the wrong format";
-            this.resultText.color = Color.red;
+            this.feedbackText.text = "The 'From Date' is in the wrong format";
+            this.feedbackText.color = Color.red;
             return false;
         }
-        if (!dateRegex.IsMatch(toDateInput.text))
+        if (!dateRegex.IsMatch(toYearInput.text))
         {
-            this.resultText.text = "The 'To Date' is in the wrong format";
-            this.resultText.color = Color.red;
+            this.feedbackText.text = "The 'To Date' is in the wrong format";
+            this.feedbackText.color = Color.red;
             return false;
         }
 
@@ -102,30 +112,27 @@ public class SolveWindowManager : MonoBehaviour
         if (!this.validateInput())
         {
             Debug.Log("Failed validation...");
+            // write to feedback text
             return;
         }
 
-        var toDateNum = this.dateNum(toDateInput.text);
-        var fromDateNum = this.dateNum(fromDateInput.text);
+        var toDateNum = this.dateNum(toYearInput.text);
+        var fromDateNum = this.dateNum(fromYearInput.text);
         var region = regionDropdown.options[regionDropdown.value].text;
 
         if (!this.dateContains(this.date, fromDateNum, toDateNum))
         {
-            this.resultText.text = "The year is wrong...";
-            this.resultText.color = Color.red;
+            // show fail message for date
             return;
         }
 
         if (!region.Equals(this.correctRegion))
         {
-            Debug.Log("correct region...");
-            this.resultText.text = "The region is wrong...";
-            this.resultText.color = Color.red;
+            // show fail message for region
             return;
         }
 
-        this.resultText.text = "Success!\nReturning to Main Menu...";
-        this.resultText.color = Color.green;
+        // Show success message
 
         this.success = true;
     }
