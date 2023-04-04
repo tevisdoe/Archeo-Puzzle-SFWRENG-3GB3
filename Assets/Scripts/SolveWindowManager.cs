@@ -10,21 +10,31 @@ public class SolveWindowManager : MonoBehaviour
 {
     [SerializeField]
     List<Button> UIButtons;
+
     [SerializeField]
     TMPro.TMP_Dropdown regionDropdown;
+
     [SerializeField]
-    TMPro.TMP_InputField fromDateInput;
+    TMPro.TMP_Dropdown fromEraDropdown;
     [SerializeField]
-    TMPro.TMP_InputField toDateInput;
+    TMPro.TMP_InputField fromYearInput;
+
     [SerializeField]
-    TMPro.TMP_Text resultText;
+    TMPro.TMP_Dropdown toEraDropdown;
+    [SerializeField]
+    TMPro.TMP_InputField toYearInput;
+
+    [SerializeField]
+    TMPro.TMP_Text feedbackText;
+
     [SerializeField]
     int date;
+
     [SerializeField]
     string correctRegion;
 
-    private bool success;
-    private float time = 2.5f;
+    [SerializeField]
+    GameObject solveDialog;
 
     public void Start()
     {
@@ -47,49 +57,46 @@ public class SolveWindowManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (!success)
-            return;
-        time -= Time.deltaTime;
-        if (time <= 0)
-        {
-            SceneManager.LoadScene("Menu");
-        }
-    }
-
     private bool validateInput()
     {
-        var dateRegex = new Regex(@"\d+(BC|AD)");
-
-
-        if (!dateRegex.IsMatch(fromDateInput.text))
+        try
         {
-            this.resultText.text = "The 'From Date' is in the wrong format";
-            this.resultText.color = Color.red;
+            int toYear = Int32.Parse(toYearInput.text);
+            if (toYear < 0)
+            {
+                feedbackText.text = "'To Year' must be positive";
+                return false;
+            }
+        }
+        catch (FormatException)
+        {
+            feedbackText.text = "'To Year' must be a number";
             return false;
         }
-        if (!dateRegex.IsMatch(toDateInput.text))
+        try
         {
-            this.resultText.text = "The 'To Date' is in the wrong format";
-            this.resultText.color = Color.red;
+            int fromYear = Int32.Parse(fromYearInput.text);
+            if (fromYear < 0)
+            {
+                feedbackText.text = "'From Year' must be positive";
+                return false;
+            }
+        }
+        catch (FormatException)
+        {
+            feedbackText.text = "'From Year' must be a number";
             return false;
         }
+
 
         return true;
     }
 
     // Returns a negative year if it is BC, otherwise it should be positive
-    private int dateNum(string val)
+    private int dateValue(string val, int era)
     {
-        int len = val.Length;
-        string sub = val.Substring(0, len - 2);
-
-        var num = Int32.Parse(sub);
-        if (val.Substring(len - 2) == "BC")
-            num *= -1;
-
-        return num;
+        var num = Int32.Parse(val);
+        return num * (era == 0 ? -1 : 1);
     }
 
     private bool dateContains(int year, int from, int to)
@@ -97,36 +104,73 @@ public class SolveWindowManager : MonoBehaviour
         return from <= year && year <= to;
     }
 
+    int points()
+    {
+        int points = 100;
+
+        int fromDateNum = this.dateValue(fromYearInput.text, fromEraDropdown.value);
+        int toDateNum = this.dateValue(toYearInput.text, toEraDropdown.value);
+
+        int diff = Math.Abs(toDateNum - fromDateNum) / 10;
+
+        return Math.Max(0, points - diff);
+    }
+
     public void solve()
     {
         if (!this.validateInput())
         {
-            Debug.Log("Failed validation...");
+            // write to feedback text
+            this.showDialog("Year must be a positive number");
             return;
         }
 
-        var toDateNum = this.dateNum(toDateInput.text);
-        var fromDateNum = this.dateNum(fromDateInput.text);
+        var toDateNum = this.dateValue(toYearInput.text, toEraDropdown.value);
+        var fromDateNum = this.dateValue(fromYearInput.text, fromEraDropdown.value);
         var region = regionDropdown.options[regionDropdown.value].text;
 
+        bool success = true;
+        string hint = "";
         if (!this.dateContains(this.date, fromDateNum, toDateNum))
         {
-            this.resultText.text = "The year is wrong...";
-            this.resultText.color = Color.red;
-            return;
+            success = false;
+            hint += "I am not sure the date is correct...\n";
         }
 
         if (!region.Equals(this.correctRegion))
         {
-            Debug.Log("correct region...");
-            this.resultText.text = "The region is wrong...";
-            this.resultText.color = Color.red;
-            return;
+            success = false;
+            hint += "I am not sure the region is correct...\n";
         }
 
-        this.resultText.text = "Success!\nReturning to Main Menu...";
-        this.resultText.color = Color.green;
+        // Show success message
+        if (success)
+        {
+            int points = this.points();
+            if (points < 50)
+            {
+                this.showDialog("Date range is too large!");
+            }
+            else
+            {
+                this.showDialog(points);
+            }
+        }
+        else
+        {
+            this.showDialog(hint);
+        }
+    }
 
-        this.success = true;
+    void showDialog(int score)
+    {
+        GameObject obj = Instantiate(solveDialog);
+        obj.GetComponent<SolveDialog>().init(score);
+    }
+
+    void showDialog(string hint)
+    {
+        GameObject obj = Instantiate(solveDialog);
+        obj.GetComponent<SolveDialog>().init(hint);
     }
 }
