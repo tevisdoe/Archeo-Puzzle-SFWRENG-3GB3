@@ -66,15 +66,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'When looking through the history books, we rarely see sections dedicated
-    to the intricacies of these clay and metallic testimonies of craftsmanship; you
-    might find them mentioned in passing if you are lucky. It is truly puzzling as
-    to why these important pieces of history are looked over in favour of swords,
-    weapons, clothes, and architecture. But today, this changes with this book. This
-    book aims to right the injustice against the integral pillars of history that
-    are jars and vases.
-
-'
+  m_text: Swords have been much more than tools of war. They have been revered as
+    works of art, treasured as family heirlooms, and used in rituals and ceremonies.
+    Legendary warriors, knights, and samurais have wielded swords, leaving their
+    mark in battles that have shaped history. From the rise and fall of empires to
+    the clashes of armies on the battlefield, swords have played a pivotal role.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -648,10 +644,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Although we aim to right the wrongs of the scholars against vases and jars,
-    we must first begin with an injustice of our own. We must skip a measurable portion
-    of the history of vases and jars to start late in Ancient Egypt, specifically,
-    with the Hyksos.
+  m_text: 'Join us on this journey through the ages as we uncover the secrets of
+    sword making, explore the symbolism behind their designs, and reveal the stories
+    of those who wielded them in battle. Through these pages, we will witness the
+    feats of heroic individuals and gain insight into the enduring significance of
+    swords in human history. So, let''s embark on this fascinating exploration of
+    the world of swords. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -2788,8 +2786,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Every empire had its sword. Every nation had their cart and wheel. And
-    every household had its jar and vase.
+  m_text: Throughout history, swords have been more than just weapons. They have
+    represented power, status, and craftsmanship, shaping the world we know today.
+    In this book, we will explore the rich history of swords, from their earliest
+    origins to their evolution over time, revealing their unique designs, purposes,
+    and significance in different cultures.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -3064,7 +3065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Book 1: Vases and Jars, in the Old and Far'
+  m_text: 'Book 2: Blades and Edges'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
