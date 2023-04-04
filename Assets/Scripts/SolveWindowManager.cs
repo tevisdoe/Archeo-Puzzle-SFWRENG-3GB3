@@ -113,16 +113,15 @@ public class SolveWindowManager : MonoBehaviour
 
         int diff = Math.Abs(toDateNum - fromDateNum) / 10;
 
-
-        return points - diff;
+        return Math.Max(0, points - diff);
     }
 
     public void solve()
     {
         if (!this.validateInput())
         {
-            Debug.Log("Failed validation...");
             // write to feedback text
+            this.showDialog("Year must be a positive number");
             return;
         }
 
@@ -130,28 +129,48 @@ public class SolveWindowManager : MonoBehaviour
         var fromDateNum = this.dateValue(fromYearInput.text, fromEraDropdown.value);
         var region = regionDropdown.options[regionDropdown.value].text;
 
+        bool success = true;
+        string hint = "";
         if (!this.dateContains(this.date, fromDateNum, toDateNum))
         {
-            // show fail message for date
-            this.showDialog("Incorrect", "I am not sure the date is correct...");
-            return;
+            success = false;
+            hint += "I am not sure the date is correct...\n";
         }
 
         if (!region.Equals(this.correctRegion))
         {
-            // show fail message for region
-            this.showDialog("Incorrect", "I am not sure the region is correct...");
-            return;
+            success = false;
+            hint += "I am not sure the region is correct...\n";
         }
 
         // Show success message
-        this.showDialog("Correct", "Score: " + this.points());
+        if (success)
+        {
+            int points = this.points();
+            if (points < 50)
+            {
+                this.showDialog("Date range is too large!");
+            }
+            else
+            {
+                this.showDialog(points);
+            }
+        }
+        else
+        {
+            this.showDialog(hint);
+        }
     }
 
-    void showDialog(string message, string hint)
+    void showDialog(int score)
     {
         GameObject obj = Instantiate(solveDialog);
-        obj.GetComponent<SolveDialog>().result.text = message;
-        obj.GetComponent<SolveDialog>().scoreText.text = hint;
+        obj.GetComponent<SolveDialog>().init(score);
+    }
+
+    void showDialog(string hint)
+    {
+        GameObject obj = Instantiate(solveDialog);
+        obj.GetComponent<SolveDialog>().init(hint);
     }
 }
