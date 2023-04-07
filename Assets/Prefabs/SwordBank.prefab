@@ -1,5 +1,145 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3717708468225066440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3819570377883795928}
+  - component: {fileID: 2045946189488035193}
+  - component: {fileID: 1656715795235804602}
+  m_Layer: 5
+  m_Name: TestText (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3819570377883795928
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717708468225066440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5595792264177332522}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 593.35, y: -655.16003}
+  m_SizeDelta: {x: 1106.7, y: 250.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2045946189488035193
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717708468225066440}
+  m_CullTransparentMesh: 1
+--- !u!114 &1656715795235804602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717708468225066440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: The actual blade resembled a triangle in shape; relatively wide base rapidly
+    approaching the sharp point at the end. The face of the blade is usually flattened
+    to save on steel and weight. A very unique design when it comes to swords. But
+    don't let the design fool you. The blade was very sharp and could cut through
+    most materials with ease. The blade was made of high carbon steel, 0.8-0.9% carbon
+    content. This was meant to allow for a sharper blade.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510411232866819
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,18 +584,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In addition to depictions of nature and animals, the use of Arabic calligraphy
-    and geometric shapes was common. As if to give all what they had to offer for
-    the beautification of jars and vases. All but themselves...
+  m_text: The pummel design changed over the age of this empire, starting of with
+    simple designs and becoming more and more ornate and involved; incorporating
+    the sigil of the family or clan that the sword was kept with. While the pummel
+    does provide some functionality, it doesn't need to be the same steel used in
+    the blade. Hence, softer steel was used in. Cheaper and quicker to create than
+    higher carbon steel that was used in the blade.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -512,7 +655,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510411626842482
@@ -784,18 +927,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shape wise, they resembled an hour glass figure, emphasising the lower
-    section where all the contents are stored. They featured two handles on either
-    side of the jar, in either the vertical or horizontal configuration.
+  m_text: The sword smiths were able to create swords that were both beautiful and
+    deadly. The pummel was well designed to show the house it belonged to. Loin heads,
+    roses, dragon heads, etc. The handle was covered in leather straps, usually just
+    one strap wrapped around the entire handle. Dyes were colorful and variant. The
+    guard didn't escape the beauty treatment. The guard was usually ornate and had
+    a unique design. All were made of softer, low carbon steel, increasing as you
+    would go up towards the blade.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -852,7 +999,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510411959970338
@@ -921,18 +1068,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It was also influenced by the Chinese style where they frequently used
-    white and blue colours in their pieces, finishing it with a shiny glaze to further
-    reflect and awe all the viewers.
+  m_text: The handle allowed for two handing the sword, by having a metal ring in
+    the middle, even though the length and weight did not require it. Everywhere
+    else was covered with leather straps. Darker colors were more popular than others.
+    These darker dyes tended to add a significant amount of the same compound commonly
+    found in melanin, which has a high amount of "COOH" and "OH" groups. It should
+    be noticed that the leather also contains high amount of "OH" groups, which might
+    confuse the result if not observed carefully.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -989,7 +1140,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412070883891
@@ -1287,7 +1438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "500-31 \nBCE"
+  m_text: 1485-1603 AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -1422,7 +1573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1650-1550 BCE
+  m_text: 1261-1453 AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -1524,10 +1675,10 @@ RectTransform:
   m_Father: {fileID: 5595792264177332522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1000.036, y: 0.9323206}
-  m_SizeDelta: {x: 1379, y: 81.62}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 593.35, y: -51.8}
+  m_SizeDelta: {x: 1106.7, y: 83.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5274510412469924439
 CanvasRenderer:
@@ -1557,22 +1708,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: By the time the Hyksos take over the north of Egypt, the art in Egypt declines
-    and becomes crude, and our objects of interest suffer as a result. While there
-    is still art and creativity poured into vases and jars, it is perhaps not as
-    much as they deserve. Vases are still made of clay and didn't benefit from the
-    advancement in bronze that happened during the reign of the Middle Kingdom of
-    Egypt. Vases didn't have any significant decorations, and if they did, they were
-    accompanied by humanoid drawings.
+  m_text: While this particular empire lasted and existed far longer than period
+    observed in this book, we are only interested in the intersection with the medieval
+    era.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1629,7 +1776,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412482251599
@@ -1698,25 +1845,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: While Ancient Greece has a rich history that starts before the aforementioned
-    time, we will only focus on their use of jars and vases. This period had some
-    interesting styles applied to these containers of liquids and other flowing materials.
-    Although pottery was mostly devoid of any colours aside from the natural glazing
-    and the black paints that were used, they were still quite distinguished in their
-    own way. Pottery usually featured decorations, that resembled ribbons, at the
-    top and bottom of the main art piece depicting different events and activities
-    that an average Greek might have partaken in. Drawings were usually done from
-    the side, rarely depicting the full face of the subjects nor the frontal view
-    of the objects in play.
+  m_text: Tudor England was an interesting time in the English history. The country
+    was still recovering from the war of the roses, which was a civil war between
+    the houses of Lancaster and York. Hence blacksmiths was a vital part in the English
+    tradesmanship. Namely, sword smiths.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1773,7 +1914,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412505522690
@@ -1918,19 +2059,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This empire had the largest land mass compared to the others, so the soil
-    had a much larger variation than before. But, the vases were also fully coloured,
-    covering the natural colour of the clay with other artificial colours, as briefly
-    discussed above.
+  m_text: Now, to the main event of the show. The blade. Swords from this era that
+    lasted until today probably went through more people than you ever got to meet,
+    event with today's fast paced environment. Swords captured from killed or imprisoned
+    enemies were melted to be used to create swords for the victors. Hence, they
+    tended to have a high carbon content, 0.8-0.9%.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1987,7 +2129,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412690982159
@@ -2023,10 +2165,10 @@ RectTransform:
   m_Father: {fileID: 5595792264177332522}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1000.036, y: 0.9323206}
-  m_SizeDelta: {x: 1379, y: 81.62}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 593.35, y: -447.075}
+  m_SizeDelta: {x: 1106.7, y: 125.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5274510412690982156
 CanvasRenderer:
@@ -2056,19 +2198,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Since the Middle Kingdom of Egypt did not expand beyond the northern region
-    of Egypt, there wasn''t much variation in terms of clay used, which in turn reduced
-    the amount of variation in the colours available for pottery. Because of this,
-    pottery often remained the same colour: beige.'
+  m_text: The pummel and handle were made of softer steel, 0.5-0.6% carbon content.
+    This was meant to allow for better grip and that it was cheaper than the harder
+    steel used in the blade.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2125,7 +2266,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412703901325
@@ -2161,10 +2302,10 @@ RectTransform:
   m_Father: {fileID: 5595792264177332522}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1000.036, y: 0.9323206}
-  m_SizeDelta: {x: 1379, y: 81.62}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 593.35, y: -238.98999}
+  m_SizeDelta: {x: 1106.7, y: 250.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5274510412703901322
 CanvasRenderer:
@@ -2194,19 +2335,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: These drawings are referred to as humanoid due to their Lovercraftian proportions,
-    and yet they resemble human beings. These drawings are renowned for their small
-    heads, narrow shoulders and waists, slender limbs with no visible musculature.
-    Beyond that, nothing differentiated these artefacts from large cups.
+  m_text: Beginning from the bottom, the Byzantian pummels usually featured a some
+    sort of ring design to allow hanging from various hooks. The handle was mainly
+    covered in leather straps parallel to one another. More like leather rings around
+    the handle than a single piece leather wrapped around the handle. The guards
+    tended to be flat yet sturdy. It was not uncommon to find some engraving on the
+    guards, but most were left plain.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2263,7 +2406,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412745869505
@@ -2468,18 +2611,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ancient Greece covered a greater area of land, meaning they had access
-    to a larger variety of soils, which affected the colour of the vases. More northern
-    regions had darker coloured soils and southern regions had lighter coloured soils.
+  m_text: The blade itself was made of high carbon 0.8-0.9% steel. It featured what
+    is called a blood groove in the center of the blade. Contrary to common belief,
+    the main benefit of the blood groove was to simply reduce weight while maintaining
+    the same strength. The blade itself looked like you would expect a sword to look
+    like, almost parallels sides closing in to a point at the end.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2536,7 +2681,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412851989479
@@ -2925,21 +3070,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: One of the prominent features of pottery during the Abbasid empire was
-    how ornate it was and the lack of any human depiction. And jars and vases were
-    heavily affected by this change. Any negative space left untouched was only to
-    highlight the beauty of the main pieces. If there was a bird in the foreground,
-    you would find leaves and branches crawling all over the jar as if worshipping
-    and celebrating the main subject of the decorations.
+  m_text: As with any European empire before the 1900s, Prussia has a rich history
+    with swords. While not many people were able to afford great or long swords,
+    swords longer than the roman gladius were not uncommon. In fact, during early
+    times in this period, many swords, of longer length, were modeled after swords
+    from the byzantine era with some minor differences. The guard tended to be slightly
+    more ornate and slightly angled towards the blade, rather than being flat, closer
+    to a crescent than a semi-circle.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2996,7 +3142,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5274510412963650554
@@ -3200,9 +3346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '750-1517
-
-    AD'
+  m_text: 1525-1713 AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -3517,7 +3661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 331837199542149682, guid: b0e230f9c1dcf7244bbd1605bcc97e33, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 790.55005
       objectReference: {fileID: 0}
     - target: {fileID: 331837199542149682, guid: b0e230f9c1dcf7244bbd1605bcc97e33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3792,6 +3936,10 @@ PrefabInstance:
     - target: {fileID: 4427958860495295250, guid: b0e230f9c1dcf7244bbd1605bcc97e33, type: 3}
       propertyPath: m_Name
       value: Page 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427958860495295250, guid: b0e230f9c1dcf7244bbd1605bcc97e33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351172767294871166, guid: b0e230f9c1dcf7244bbd1605bcc97e33, type: 3}
       propertyPath: m_ChildForceExpandWidth
