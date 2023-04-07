@@ -407,7 +407,7 @@ Transform:
   - {fileID: 1536378375}
   - {fileID: 447473106}
   - {fileID: 971330468}
-  - {fileID: 1852613210}
+  - {fileID: 937914420}
   m_Father: {fileID: 157167572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1332,6 +1332,125 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb18c3e949b12c147a6c1288fffc810e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &937914419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937914420}
+  - component: {fileID: 937914424}
+  - component: {fileID: 937914423}
+  - component: {fileID: 937914422}
+  - component: {fileID: 937914421}
+  m_Layer: 6
+  m_Name: guard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937914420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937914419}
+  m_LocalRotation: {x: -0.12283556, y: 0.039087716, z: 0.1322285, w: 0.98280174}
+  m_LocalPosition: {x: 0.4768, y: 0.1264, z: -0.2834}
+  m_LocalScale: {x: 0.09654096, y: 0.23444913, z: 0.12645172}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 227362240}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -14.583, y: 2.626, z: 14.989}
+--- !u!114 &937914421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937914419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc3a628348bea4408c521ac7ec602ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noneMessage: NA
+  magniferMessage: Overall A simple design, but is not devoid of some decoration.
+  brushMessage: The sword has bees cleand in advance.
+  materialMessage: 96.8%Iron - 0.64% Carbon
+  coveredMessage: The sword has bees cleand in advance.
+  magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
+  materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
+  tipManager: {fileID: 7341832}
+--- !u!136 &937914422
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937914419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &937914423
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937914419}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &937914424
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937914419}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &958825572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,125 +2948,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!1 &1852613209
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852613210}
-  - component: {fileID: 1852613214}
-  - component: {fileID: 1852613213}
-  - component: {fileID: 1852613212}
-  - component: {fileID: 1852613211}
-  m_Layer: 0
-  m_Name: guard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1852613210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852613209}
-  m_LocalRotation: {x: -0.09188612, y: -0.009015567, z: 0.09723072, w: 0.9909702}
-  m_LocalPosition: {x: 0.4724, y: 0.1195, z: -0.2847}
-  m_LocalScale: {x: -0.10228361, y: 0.24082437, z: 0.09519557}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 227362240}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -10.391, y: -2.082, z: 11.397}
---- !u!114 &1852613211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852613209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc3a628348bea4408c521ac7ec602ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noneMessage: NA
-  magniferMessage: Overall A simple design, but is not devoid of some decoration.
-  brushMessage: The sword has bees cleand in advance.
-  materialMessage: 96.8%Iron - 0.64% Carbon
-  coveredMessage: The sword has bees cleand in advance.
-  magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
-  materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
-  tipManager: {fileID: 7341832}
---- !u!136 &1852613212
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852613209}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1852613213
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852613209}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1852613214
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852613209}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1915890467 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4977790628459331329, guid: 6bac0bf69bff9684f8152a96bc0c1956, type: 3}
