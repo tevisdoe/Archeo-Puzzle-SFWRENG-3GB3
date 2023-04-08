@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "500-31 \nBCE"
+  m_text: 500-31 BC
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1650-1550 BCE
+  m_text: 1650-1550 BC
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
   m_sharedMaterial: {fileID: 5760302381308643585, guid: dc6980f6c28ec44d184d74b54e435dbc, type: 2}
