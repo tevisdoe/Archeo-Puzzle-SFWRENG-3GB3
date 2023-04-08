@@ -12,8 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevel2()
     {
-        //TODO: Add link to level 2
-        //SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level2");
     }
 
     public void ExitGame()
