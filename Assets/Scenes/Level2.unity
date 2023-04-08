@@ -555,10 +555,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noneMessage: NA
-  magniferMessage: The handel is covered in leather strips wich deyed a black color.
-  brushMessage: The sword has bees cleand in advance.
+  magniferMessage: The handel is covered in leather strips, wich are deyed a black
+    color.
+  brushMessage: The sword has been cleand in advance.
   materialMessage: 70% Carbon 20% Hydrogen 9% Oxygen
-  coveredMessage: The sword has bees cleand in advance.
+  coveredMessage: The sword has been cleand in advance.
   magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
   materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
   tipManager: {fileID: 7341832}
@@ -1381,9 +1382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noneMessage: NA
   magniferMessage: Overall A simple design, but is not devoid of some decoration.
-  brushMessage: The sword has bees cleand in advance.
+  brushMessage: The sword has been cleand in advance.
   materialMessage: 96.8%Iron - 0.64% Carbon
-  coveredMessage: The sword has bees cleand in advance.
+  coveredMessage: The sword has been cleand in advance.
   magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
   materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
   tipManager: {fileID: 7341832}
@@ -1536,9 +1537,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noneMessage: NA
   magniferMessage: The pummel ends in a simple ring.
-  brushMessage: The sword has bees cleand in advance.
+  brushMessage: The sword has been cleand in advance.
   materialMessage: 96.3% Iron 0.5% Carbon
-  coveredMessage: The sword has bees cleand in advance.
+  coveredMessage: The sword has been cleand in advance.
   magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
   materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
   tipManager: {fileID: 7341832}
@@ -2011,12 +2012,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc3a628348bea4408c521ac7ec602ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noneMessage: NA
+  noneMessage: The metal is cold to the touch.
   magniferMessage: Went through a lot of battles. The hard nature of the steel favoured
     chips over dents and bends.
-  brushMessage: The sword has bees cleand in advance.
+  brushMessage: The sword has been cleand in advance.
   materialMessage: 97%Iron 0.78%Carbon
-  coveredMessage: The sword has bees cleand in advance.
+  coveredMessage: The sword has been cleand in advance.
   magnifierClip: {fileID: 8300000, guid: 5635af6a51429834e864e9f828617285, type: 3}
   materialClip: {fileID: 8300000, guid: 2a3cdb884631a574fa5e7e26fd640c93, type: 3}
   tipManager: {fileID: 7341832}
