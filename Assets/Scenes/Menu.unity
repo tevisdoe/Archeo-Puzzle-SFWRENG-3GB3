@@ -5625,9 +5625,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabGroup: {fileID: 1688896153}
-  baseColour: {r: 1, g: 1, b: 1, a: 0.6745098}
+  baseColour: {r: 1, g: 1, b: 1, a: 0.43137255}
   selectedColour: {r: 1, g: 1, b: 1, a: 0.6745098}
-  background: {fileID: 0}
+  background: {fileID: 1424283324}
 --- !u!114 &1424283324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5719,9 +5719,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabGroup: {fileID: 1688896153}
-  baseColour: {r: 0.74509805, g: 0.46666667, b: 0.46666667, a: 0.6745098}
-  selectedColour: {r: 0.74509805, g: 0.46666667, b: 0.46666667, a: 0.6745098}
-  background: {fileID: 0}
+  baseColour: {r: 1, g: 1, b: 1, a: 0.43137255}
+  selectedColour: {r: 1, g: 1, b: 1, a: 0.6745098}
+  background: {fileID: 1487205840}
 --- !u!114 &1487205840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5735,7 +5735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.74509805, g: 0.4666667, b: 0.4666667, a: 0.74509805}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
