@@ -20,7 +20,6 @@ public class TabButton : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        background = this.gameObject.GetComponent<Image>();
         tabGroup.Subscribe(this);
     }
 }

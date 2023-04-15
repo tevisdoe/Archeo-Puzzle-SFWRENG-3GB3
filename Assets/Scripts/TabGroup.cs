@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class TabGroup : MonoBehaviour
 {
     public List<TabButton> tabButtons;
-    public Image databankBackground;
     public ScrollRect scrollArea;
     public AudioSource artifactSource;
     public AudioClip tabClip;
@@ -24,7 +23,6 @@ public class TabGroup : MonoBehaviour
     {
         ResetTabs();
         button.background.color = button.selectedColour;
-        databankBackground.color = button.selectedColour;
 
         int index = button.transform.GetSiblingIndex();
         if (index != currentIndex && artifactSource) artifactSource.PlayOneShot(tabClip);
