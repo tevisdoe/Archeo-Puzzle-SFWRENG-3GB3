@@ -25,9 +25,6 @@ public class SolveWindowManager : MonoBehaviour
     TMPro.TMP_InputField toYearInput;
 
     [SerializeField]
-    TMPro.TMP_Text feedbackText;
-
-    [SerializeField]
     int date;
 
     [SerializeField]
@@ -64,13 +61,11 @@ public class SolveWindowManager : MonoBehaviour
             int toYear = Int32.Parse(toYearInput.text);
             if (toYear < 0)
             {
-                feedbackText.text = "'To Year' must be positive";
                 return false;
             }
         }
         catch (FormatException)
         {
-            feedbackText.text = "'To Year' must be a number";
             return false;
         }
         try
@@ -78,13 +73,11 @@ public class SolveWindowManager : MonoBehaviour
             int fromYear = Int32.Parse(fromYearInput.text);
             if (fromYear < 0)
             {
-                feedbackText.text = "'From Year' must be positive";
                 return false;
             }
         }
         catch (FormatException)
         {
-            feedbackText.text = "'From Year' must be a number";
             return false;
         }
 
