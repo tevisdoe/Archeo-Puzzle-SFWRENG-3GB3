@@ -26,6 +26,7 @@ public class ToolLogic : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(menuAccessed);
         if(Input.GetMouseButtonDown(0) && !menuAccessed)
         {
             RaycastHit rayHit;
@@ -129,7 +130,7 @@ public class ToolLogic : MonoBehaviour
     public void toggleMenuCursor()
     {
 
-        if (menuAccessed == false)
+        if (!menuAccessed)
         {
             menuAccessed = true;
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
